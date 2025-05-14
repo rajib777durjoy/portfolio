@@ -1,46 +1,33 @@
-import React from 'react';
-import { FaCss3Alt, FaHtml5, FaNode, FaReact } from 'react-icons/fa';
-import { IoLogoJavascript } from 'react-icons/io';
-import { SiExpress, SiMongodb, SiTailwindcss } from 'react-icons/si';
+
+import React, { useEffect, useState } from 'react';
+import { motion } from "motion/react"
 
 const Skills = () => {
+    const [data, setData] = useState([])
+    useEffect(() => {
+        fetch('/skills.json')
+            .then(res => res.json())
+            .then(data => setData(data))
+    }, [])
+    console.log('data:', data)
     return (
-        <div id='skills' className='w-[100%] min-h-[300px] mb-10'>
-            <h1 className='text-4xl text-center text-white'>Skills</h1>
-            <div className='w-[90%] mx-auto my-5 grid gap-4 md:grid-cols-4'>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                    <FaHtml5 className='text-4xl text-white mx-auto my-2' />
-                    <h1>Html</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                  <FaCss3Alt className='text-4xl text-white mx-auto my-2' />
-                    <h1>CSS</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <SiTailwindcss className='text-4xl text-white mx-auto my-2' />
-                    <h1>Tailwind</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <IoLogoJavascript className='text-4xl text-white mx-auto my-2' />
-                    <h1>JavaScript</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <FaReact className='text-4xl text-white mx-auto my-2' />
-                    <h1>React.js</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <FaNode className='text-4xl text-white mx-auto my-2' />
-                    <h1>Node.js</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <SiExpress className='text-4xl text-white mx-auto my-2' />
-                    <h1>Express.js</h1>
-                </div>
-                <div className='text-white hover:bg-cyan-500 h-[100px] border rounded-full'>
-                <SiMongodb className='text-4xl text-white mx-auto my-2' />
-                    <h1>MonogDB</h1>
-                </div>
+        <div id='skills' className='w-[100%] lg:min-h-[400px]'>
+            <h1 className='lg:text-2xl text-xl text-white text-center'>Skills</h1>
+            <div className='w-[100%] grid grid-cols-4 gap-4 mt-10 '>
+               {
+                 data.map((item,index)=>(
+                   
+                        <motion.div
+                         initial={{opacity:1,scale:0.8}}
+                         whileHover={{opacity:0.9,scale:0.9}}
+                         transition={{duration:0.5}}
+                         className='text-center text-xs md:text-lg border w-[70px] md:w-auto my-4 h-[50px] pt-3 font-bold rounded-lg  mx-2 border-t-4 border-t-sky-300'>{item.name}</motion.div>
+                 ))
+               }
             </div>
+
+
+
         </div>
     );
 };

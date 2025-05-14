@@ -1,34 +1,92 @@
 import React from 'react';
 import profile from '../../assets/profileImg.png'
-import { FaFacebookSquare, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import { FaFacebook, FaGithub, FaLinkedin,} from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
+import '../Banner/Bg.css'
+import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className='w-[100%] min-h-[500px] md:flex justify-around items-center py-10 mb-5'>
-            <div className='w-[100%] md:w-[50%]'>
-                <h1 className='text-4xl text-slate-300 text-start my-2'>🙋‍♂️Hi !</h1>
-                <h2 className='text-3xl text-slate-300 text-start my-2'>I'm DurjoyChando</h2>
-                <p className='text-2xl text-slate-300 text-start'>Front-End Developer</p>
-                <p className='w-[100%] text-start my-2'>I am a passionate Front-End Developer specializing in React.js with a strong command over HTML, CSS, JavaScript, and Tailwind CSS. I excel at creating dynamic, responsive, and user-friendly web applications with a keen eye for design and performance.</p>
-                <div className='w-[100%] grid grid-cols-4 mt-4'>
-                    <a href='https://github.com/rajib777durjoy' target='_blank'>
-                        <FaGithub className='text-2xl' />
-                    </a>
-                    <a href='https://www.linkedin.com/in/durjoy-chando-4a9878317' target='_blank'>
-                        <FaLinkedin className='text-2xl' />
-                    </a>
-                    <a href='https://x.com/DurjoyChando' target='_blank'>
-                        <FaTwitter className='text-2xl' />
-                    </a>
-                    <a href="https://www.facebook.com/durjoy.chando.2024" target='_blank'>
-                        <FaFacebookSquare className='text-2xl' />
-                    </a>
+        <div className='w-[100%] lg:min-h-screen md:flex justify-between mb-5'>
+            <div className='w-[100%]  mx-auto min-h-[350px] mt-[150px]  shadow shadow-slate-400 z-20 rounded-lg'>
+                <h1 className='text-lg md:text-2xl lg:w-[60%] mx-auto font-bold  md:my-5 px-5 text-white'>HI, I'm Durjoy Chando</h1>
+                <div className='text-2xl lg:w-[60%] mx-auto font-bold md:mt-5'>
+                    <span className='px-5 text-xl text-sky-600' style={{ color: '', fontWeight: 'bold' }}>
+                        <Typewriter className="mx-2 text-xl"
+                            words={['FrontEnd Developer','MERN Stack Developer']}
+                            loop={0}
+                            cursor
+                            cursorStyle='_'
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={1000}
+                        />
+                    </span>
                 </div>
-                <div className='w-[50%] mx-auto md:mt-20 my-6'>
-                    <a href='http://localhost:5173' download='resume.jpg'><button className='btn w-[100%] bg-cyan-500 text-black'>Resume</button></a>
+                <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5 mt-4'>
+                <Typewriter className="mx-2"
+                            words={['I am a MERN Stack and Front-End Developer with experience in building dynamic,responsive web applications.']}
+                            loop={1}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={10}
+                            
+                            delaySpeed={1000}
+                        />
+                </p>
+                <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5 '>
+                <Typewriter className="mx-2"
+                            words={['My expertise includes React.js for intuitive user interfaces, Node.js and MongoDB for scalable backends,and']}
+                            loop={1}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={10}
+                            
+                            delaySpeed={1000}
+                        /> 
+                </p>
+               <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5 '>
+               <Typewriter className="mx-2"
+                            words={['Tailwind CSS for fast, responsive designs. I’m also proficient in RESTful APIs and version control with GitHub.']}
+                            loop={1}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={15}
+                            
+                            delaySpeed={1000}
+                        /> 
+               </p>
+                         
+                <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5 '>
+                <Typewriter className="mx-2"
+                            words={["Passionate about continuous learning, I'm currently expanding my skill set with AWS, Docker, SQL, and "]}
+                            loop={1}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={20}
+                            
+                            delaySpeed={1000}
+                        /> 
+                        
+                </p>
+                <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5'>
+                <Typewriter className="mx-2"
+                            words={['TypeScript to stay on top of industry trends and deliver high-quality, modern web solutions.']}
+                            loop={1}
+                            cursor
+                            cursorStyle=''
+                            typeSpeed={25}
+                            delaySpeed={1000}
+                        /> 
+                        
+                </p>
+
+                <div className='grid grid-cols-3 w-[40%] md:w-[20%] gap-4  mx-auto mt-5 py-5'>
+                    <Link className='border border-sky-400  w-[35px] hover:border-white h-[35px]  rounded-full'><FaGithub    className='text-lg  text-gray-300 text-center mx-auto mt-[8px]'/></Link>
+                    <Link className='border border-sky-400  w-[35px] hover:border-white h-[35px]  rounded-full'><FaLinkedin  className='text-lg  text-gray-300 text-center mx-auto mt-[8px]'/></Link>
+                    <Link className='border border-sky-400  w-[35px] hover:border-white h-[35px]  rounded-full'><FaFacebook  className='text-lg  text-gray-300 text-center mx-auto mt-[8px]'/></Link>
+                   
                 </div>
-            </div>
-            <div className=''>
-                <img src={profile} alt="" className='w-[300px] h-[300px] border border-slate-500 rounded-full' />
+                    
             </div>
         </div>
     );

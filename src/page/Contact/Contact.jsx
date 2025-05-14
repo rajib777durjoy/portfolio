@@ -1,43 +1,29 @@
-import React from 'react';
-
+import Lottie from "lottie-react";
+import animation from '../../../src/assets/ContactAnimations.json'
 const Contact = () => {
     return (
-        <div className="hero bg-base-200 min-h-screen">
-            <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="text-center lg:text-left">
-                    <h1 className="text-5xl font-bold">Address</h1>
-                     <h1 className='text-2xl'>Country:Bangladesh</h1>
-                     <h2 className='text-2xl'>Division:Sylhet</h2>
-                     <h3 className='text-2xl'>District:Hobigonj</h3>
-                     <h3 className='text-2xl'>Village:Baniachong</h3>
-                </div>
-                <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                    <form className="card-body">
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Email</span>
-                            </label>
-                            <input type="email" placeholder="email" className="input input-bordered" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">Phone Number</span>
-                            </label>
-                            <input type="text" placeholder="number" className="input input-bordered" required />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text">WhatsApp Number</span>
-                            </label>
-                            <input type="text" placeholder="WhatsApp Number" className="input input-bordered" required />
-                        </div>
-                       
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Submit</button>
+        <div className="w-[100%] min-h-[500px] mt-20 ">
+            <h1 className='text-xl lg:text-2xl text-center text-white mt-5 font-semibold'>Contact Page</h1>
+            <div className="w-[100%] mx-auto grid md:grid-cols-2 gap-4 mt-10  rounded-md py-2">
+                <div className="border border-t-4 border-sky-200 rounded-md py-2">
+                    <form action="" className="w-[100%] mx-6 ">
+                        <label className="label text-sky-200 font-semibold">Full Name</label>
+                        <input type="text" className="w-[90%] mx-auto h-[35px] rounded-md my-2 border ps-2" name="name" placeholder="Enter you name" />
+                        <label className="label text-sky-200 font-semibold">Email</label>
+                        <input type="email" name="email" className="w-[90%] rounded-md mx-auto border my-2 h-[35px] ps-2" placeholder="Enter you email" />
+                        <label className="label text-sky-200 font-semibold">About your self</label>
+                        <textarea type='text' className="w-[90%] border  mx-auto rounded-md ps-2 " rows={5} placeholder="Bio" />
+                        <div className="">
+                            <button className="py-1 px-2 text-white rounded-md border-2 hover:text-sky-300 border-sky-300 hover:border-white text-center">Submit</button>
                         </div>
                     </form>
                 </div>
+                <div className='h-[400px] border border-t-4  border-sky-200 shadow-md shadow-sky-200 rounded-lg'>
+                    <Lottie animationData={animation} className="w-[100%] h-[100%]  "></Lottie>
+                </div>
             </div>
+
+
         </div>
     );
 };

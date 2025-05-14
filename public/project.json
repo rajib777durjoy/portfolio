@@ -1,0 +1,40 @@
+[
+  {
+    "id": 1,
+    "name": "Fitness Zone",
+    "description": "Fitness Zone is a full-stack fitness tracking and management platform designed to help users maintain a healthy lifestyle. This application allows users to track workouts, set fitness goals, monitor progress, and get personalized recommendations. It features a user-friendly dashboard with real-time updates to enhance the fitness experience.",
+    "githubLink": "https://github.com/rajib777durjoy/assignment12",
+    "liveLink": "https://assignment12-f557e.web.app",
+    "image":"/project_12image.png",
+    "challenge":["User authentication with Firebase","Interactive and responsive UI with React.js","Backend with Node.js and Express.js for API handling","Database integration with MongoDB"],
+    "futurePlan":["AI-based fitness recommendations","Social community for fitness enthusiasts","Integration with wearable fitness devices"],
+    "skills": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind.css",
+      "Git & GitHub",
+      "Firebase"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Book Library",
+    "description": "Book Library is a full-stack web application designed to help users explore, manage, and track their reading journey. The platform allows users to browse books, add new books to the collection, and maintain a personalized reading list. With Firebase authentication, users can securely log in and save their preferences.",
+    "githubLink": "https://github.com/rajib777durjoy/assignment11client",
+    "liveLink": "https://assignment11-9afa5.web.app",
+    "image": "/booklibrarywebsiteImage.png",
+    "challenge":["User authentication with Firebase","Interactive and responsive UI with React.js","Backend API powered by Node.js and Express.js","MongoDB integration for storing book and user data"],
+    "futurePlan":["AI-based book recommendations","Social community for book lovers","Integration with e-book and audiobook platforms"],
+    "skills": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Tailwind.css",
+      "Git & GitHub",
+      "Firebase"
+    ]
+  }
+]
