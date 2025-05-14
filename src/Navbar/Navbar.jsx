@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { MdOutlineFileDownload } from "react-icons/md";
 const Navbar = () => {
     const links = <>
         <li><a href='/'>Home</a></li>
@@ -42,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='/DurjoyChando_Resume.pdf' download='/DurjoyChando_Resume.pdf' rel='resume'  className="btn bg-cyan-600 text-black hover:text-white hover:border-sky-300 ">Resume</a>
+                    <a href='/DurjoyChando_Resume.pdf' download='/DurjoyChando_Resume.pdf' rel='resume'  className="btn bg-cyan-600 text-black hover:text-white hover:border-sky-300 ">Resume <MdOutlineFileDownload className='text-xl' /></a>
                 </div>
                 
             </div>

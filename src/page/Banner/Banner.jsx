@@ -1,5 +1,4 @@
 import React from 'react';
-import profile from '../../assets/profileImg.png'
 import { FaFacebook, FaGithub, FaLinkedin,} from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 import '../Banner/Bg.css'
@@ -22,7 +21,7 @@ const Banner = () => {
                         />
                     </span>
                 </div>
-                <p className='text-md lg:w-[60%] mx-auto text-slate-300 text-start px-5 mt-4'>
+                <p className='text-md  lg:w-[60%] mx-auto text-slate-300 text-start px-5 mt-4'>
                 <Typewriter className="mx-2"
                             words={['I am a MERN Stack and Front-End Developer with experience in building dynamic,responsive web applications.']}
                             loop={1}
