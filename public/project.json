@@ -1,40 +1,118 @@
 [
   {
+    "title": "Dr.Meet - Doctor Appointment App",
+    "description": "A full-stack MERN app where patients can book appointments, doctors manage appointments, and admins control everything. Includes authentication, role-based dashboard, and Firebase.",
+    "skills": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript",
+      "Firebase",
+      "Tailwind.css",
+      "HTML",
+      "CSS"
+    ],
+    "liveLink": "https://doctorproject-a4e4f.web.app/",
+    "githubLink": "https://github.com/rajib777durjoy/DoctorAppoinmentProject",
+    "image": "/doctorAppoinmentPorjct.png",
+    "challenge": "Implementing role-based access (admin, doctor, patient) with protected routes and JWT token verification using cookies was tricky. Also, syncing appointment status and real-time dashboard updates took extra logic.",
+    "futurePlan": [
+      "Integrate secure video calling functionality for virtual appointments",
+      "Implement real-time chat between patients and doctors",
+      "Generate patient health reports using AI diagnostics"
+    ]
+  },
+  {
     "id": 1,
     "name": "Fitness Zone",
     "description": "Fitness Zone is a full-stack fitness tracking and management platform designed to help users maintain a healthy lifestyle. This application allows users to track workouts, set fitness goals, monitor progress, and get personalized recommendations. It features a user-friendly dashboard with real-time updates to enhance the fitness experience.",
     "githubLink": "https://github.com/rajib777durjoy/assignment12",
     "liveLink": "https://assignment12-f557e.web.app",
-    "image":"/project_12image.png",
-    "challenge":["User authentication with Firebase","Interactive and responsive UI with React.js","Backend with Node.js and Express.js for API handling","Database integration with MongoDB"],
-    "futurePlan":["AI-based fitness recommendations","Social community for fitness enthusiasts","Integration with wearable fitness devices"],
+    "image": "/project_12image.png",
+    "challenge": [
+      "User authentication with Firebase",
+      "Interactive and responsive UI with React.js",
+      "Backend with Node.js and Express.js for API handling",
+      "Database integration with MongoDB"
+    ],
+    "futurePlan": [
+      "AI-based fitness recommendations",
+      "Social community for fitness enthusiasts",
+      "Integration with wearable fitness devices"
+    ],
     "skills": [
       "React.js",
       "Node.js",
       "Express.js",
       "MongoDB",
+      "JavaScript",
+      "Firebase",
       "Tailwind.css",
-      "Git & GitHub",
-      "Firebase"
+      "HTML",
+      "CSS"
     ]
   },
   {
     "id": 2,
+    "name": "Glob_visita Agency",
+    "description": "The Travel Agency project is a modern, responsive web platform designed to help users plan and book their trips effortlessly. It allows travelers to explore destinations, view tour packages, and make online bookings with ease. The platform features user-friendly navigation, search and filter options, and detailed information on tours and services. Built with Next.js, the project ensures a seamless and interactive experience for users while providing efficient management tools for the agency.",
+    "githubLink": "https://github.com/rajib777durjoy/Globe_Visita_Agency_Project",
+    "liveLink": "https://globe-vista-agency.vercel.app",
+    "image": "/Travel_agency.png",
+    "challenge": [
+      "Building a dynamic and responsive UI with Next.js",
+      "Implementing smooth navigation and interactive components",
+      "Showcasing travel destinations and tour packages effectively",
+      "Optimizing performance and responsiveness for desktop and mobile"
+    ],
+    "futurePlan": [
+      "Add user authentication for login and account creation",
+      "Integrate a database for storing user preferences and bookings",
+      "Implement real-time communication with Socket.io for travel agency members",
+      "Enable users to save and manage multiple travel plans securely"
+    ],
+    "skills": [
+      "React.js",
+      "Node.js",
+      "Next.js",
+      "Express.js",
+      "MongoDB",
+      "JavaScript",
+      "Firebase",
+      "Tailwind.css",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "id": 3,
     "name": "Book Library",
     "description": "Book Library is a full-stack web application designed to help users explore, manage, and track their reading journey. The platform allows users to browse books, add new books to the collection, and maintain a personalized reading list. With Firebase authentication, users can securely log in and save their preferences.",
     "githubLink": "https://github.com/rajib777durjoy/assignment11client",
     "liveLink": "https://assignment11-9afa5.web.app",
     "image": "/booklibrarywebsiteImage.png",
-    "challenge":["User authentication with Firebase","Interactive and responsive UI with React.js","Backend API powered by Node.js and Express.js","MongoDB integration for storing book and user data"],
-    "futurePlan":["AI-based book recommendations","Social community for book lovers","Integration with e-book and audiobook platforms"],
+    "challenge": [
+      "User authentication with Firebase",
+      "Interactive and responsive UI with React.js",
+      "Backend API powered by Node.js and Express.js",
+      "MongoDB integration for storing book and user data"
+    ],
+    "futurePlan": [
+      "AI-based book recommendations",
+      "Social community for book lovers",
+      "Integration with e-book and audiobook platforms"
+    ],
     "skills": [
       "React.js",
       "Node.js",
       "Express.js",
       "MongoDB",
+      "JavaScript",
+      "Firebase",
       "Tailwind.css",
-      "Git & GitHub",
-      "Firebase"
+      "HTML",
+      "CSS"
     ]
   }
 ]

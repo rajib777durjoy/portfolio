@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 // import { useNavigate } from 'react-router-dom';
-import { Swiper, SwiperSlide } from 'swiper/react';
 
+import { motion } from 'framer-motion';
+import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
+
 import './Style.css'
-import { div } from 'motion/react-client';
-import { Link } from 'react-router-dom';
+
 const Project = () => {
     // const navigate = useNavigate()
     const [project, setproject] = useState([])
@@ -20,54 +20,100 @@ const Project = () => {
     console.log('value', value)
     console.log('lenght', project.length - 1)
     const arr = ['mongodb', 'javaScript', 'node.js', 'express.js']
+    const cardVariants = {
+        offscreen: { opacity: 0, y: 50 },
+        onscreen: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.5, ease: 'easeOut' },
+        },
+    };
     return (
-        <div id='project' className='w-[100%] min-h-[500px] my-10 '>
-            <h1 className='text-center text-xl lg:text-2xl text-white my-4'>Projects</h1>
-            <div className='grid md:grid-cols-2 gap-6 mt-10 lg:mt-20 '>
-                <div className='rounded-lg min-h-[500px] border-t-4 border-sky-200 relative shadow shadow-sky-200'>
-                    <img src={project[value]?.image} alt="" className='w-[100%] rounded-md h-[100%] ' />
-                    <div className='absolute bottom-[40%] flex justify-between w-[100%]'>
-                        <button onClick={() => {
-                            setValue(value > 0 ? value - 1 : value + project.length - 1)
-                        }} className='btn bg-slate-100 border-0 text-black hover:text-white'>Prev</button>
-                        <button onClick={() => {
-                            setValue(value < project.length - 1 ? value + 1 : 0)
-                        }} className='btn bg-slate-100 text-black hover:text-white border-0'>Next</button>
-                    </div>
-                  
-                </div>
-                <div className='shadow border-t-4 border-sky-200 shadow-sky-200 rounded-lg min-h-[500px] '>
-                    <div className='mt-6 text-2xl '>
-                        <h1 className='text-center font-semibold text-sky-400 mt-2 mb-4'>{project[value]?.name}</h1>
-                        <hr className='mx-2' />
-                        <h2 className='text-center text-white font-semibold text-lg mt-2'>Description</h2>
-                        <hr className='mx-2' />
-                        <p className='text-xs text-white ms-2  py-4'>{project[value]?.description}</p>
+            <div id='project' className='w-full min-h-[500px] my-10 bg-gradient-to-br from-black via-[#001630] to-[#000814] py-10 text-gray-300'>
+                <div className="container mx-auto px-4">
+                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-blue-400">💼 My Featured Projects</h2>
 
-                        <h2 className='text-center text-lg text-white font-semibold'>Chellange</h2>
-                        <hr className='mx-2' />
-                        <p className='text-xs text-white  ms-2 py-4'>
-                            {project[value]?.challenge}
-                        </p>
-                        <h2 className='text-white text-center text-lg '>futurePlan</h2>
-                        <hr className='mx-2' />
-                        <p className='text-xs text-white  ms-2 py-4'>{project[value]?.futurePlan}</p>
-                        <hr className='mx-2' />
-                        <div className='grid md:grid-cols-3 lg:grid-cols-5 gap-2 mx-2'>
-                            {project[value]?.skills?.map(item => (<div className='btn  border-sky-300 mt-2'>
-                                {item}
-                            </div>))}
-                        </div>
-                    </div>
-                    <div className='w-[50%] lg:w-[20%] mx-auto my-2'>
-                        <button className='cursor-pointer border w-[100%] border-sky-300 hover:border-black hover:text-sky-200 text-white p-2 rounded-lg '><Link to={project[value]?.liveLink} target='_blank'>View Project</Link></button>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        {project?.map((item, idx) => (
+                            <motion.div
+                                key={idx}
+                                className="bg-[#0a1a3c] rounded-2xl shadow-md hover:shadow-blue-700/60 border border-blue-800 transition-all duration-300 overflow-hidden flex flex-col"
+                                initial="offscreen"
+                                whileInView="onscreen"
+                                viewport={{ once: true, amount: 0.2 }}
+                                variants={cardVariants}
+                                whileHover={{ scale: 1.03 }}
+                            >
+                                <img
+                                    src={item.image}
+                                    alt={item.title || item.name}
+                                    className="w-[90%] mx-auto my-4 rounded-lg shadow-lg h-48 object-cover border-2 border-blue-600"
+                                />
+                                <div className="p-5 flex flex-col flex-grow justify-between">
+                                    <div>
+                                        <h3 className="text-xl font-semibold text-blue-300 mb-2">
+                                            {item.title || item.name}
+                                        </h3>
+
+                                        <p className="text-blue-200 text-sm mb-3 line-clamp-3">{item.description}</p>
+
+                                        <div className="mb-3">
+                                            <h4 className="text-sm font-semibold text-blue-400">Challenge:</h4>
+                                            {Array.isArray(item.challenge) ? (
+                                                <ul className="list-disc list-inside text-xs text-blue-300 space-y-1">
+                                                    {item.challenge.slice(0, 2).map((c, i) => <li key={i}>{c}</li>)}
+                                                </ul>
+                                            ) : (
+                                                <p className="text-xs text-blue-300 line-clamp-2">{item.challenge}</p>
+                                            )}
+                                        </div>
+
+                                        {item.futurePlan && (
+                                            <div className="mb-3">
+                                                <h4 className="text-sm font-semibold text-blue-400">Future:</h4>
+                                                <ul className="list-disc list-inside text-xs text-blue-300 space-y-1">
+                                                    {item.futurePlan.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
+                                                </ul>
+                                            </div>
+                                        )}
+
+                                        <div className="flex flex-wrap gap-2 mt-4">
+                                            {item.skills.slice(0, 5).map((skill, i) => (
+                                                <span
+                                                    key={i}
+                                                    className="text-xs bg-blue-800 text-blue-300 px-3 py-1 rounded-full font-semibold"
+                                                >
+                                                    {skill}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+
+                                    <div className="flex justify-between items-center mt-6">
+                                        <a
+                                            href={item.liveLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm text-blue-400 hover:text-blue-600 underline flex items-center gap-1"
+                                        >
+                                            Live <FaExternalLinkAlt className="text-base" />
+                                        </a>
+                                        <a
+                                            href={item.githubLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-sm text-blue-400 hover:text-blue-600 underline flex items-center gap-1"
+                                        >
+                                            Code <FaGithub className="text-base" />
+                                        </a>
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </div>
-
-
-        </div>
-    );
+        );
 };
 
 export default Project;

@@ -1,7 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { motion } from "motion/react"
-
+import StarBorder from '../Skills/BorderEffect'
+import { div } from 'motion/react-client';
 const Skills = () => {
     const [data, setData] = useState([])
     useEffect(() => {
@@ -11,24 +12,36 @@ const Skills = () => {
     }, [])
     console.log('data:', data)
     return (
-        <div id='skills' className='w-[100%] lg:min-h-[400px]'>
-            <h1 className='lg:text-2xl text-xl text-white text-center'>Skills</h1>
-            <div className='w-[100%] grid grid-cols-4 gap-4 mt-10 '>
-               {
-                 data.map((item,index)=>(
-                   
-                        <motion.div
-                         initial={{opacity:1,scale:0.8}}
-                         whileHover={{opacity:0.9,scale:0.9}}
-                         transition={{duration:0.5}}
-                         className='text-center text-xs md:text-lg border w-[70px] md:w-auto my-4 h-[50px] pt-3 font-bold rounded-lg  mx-2 border-t-4 border-t-sky-300'>{item.name}</motion.div>
-                 ))
-               }
+        <section
+            id="skills"
+            className="w-full min-h-[450px] bg-gradient-to-br from-black via-blue-900 to-black py-16 px-6"
+        >
+            <h2 className="text-3xl font-extrabold text-center text-sky-400 mb-12 tracking-wide">
+                My Skills
+            </h2>
+
+            <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+                {data.map((item, index) => (
+                    <motion.div
+                        key={index}
+                        initial={{ opacity: 0, y: 40 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.7, delay: index * 0.1 }}
+                        className="flex flex-col items-center bg-black border border-blue-800 rounded-xl shadow-lg shadow-blue-900 p-6 cursor-pointer hover:scale-105 transition-transform duration-300"
+                    >
+                        <img
+                            src={item.Icon}
+                            alt={item.name}
+                            className="w-16 h-16 object-contain mb-4 filter brightness-125"
+                            loading="lazy"
+                            draggable={false}
+                        />
+                        <h3 className="text-sky-400 text-lg font-semibold">{item.name}</h3>
+                    </motion.div>
+                ))}
             </div>
-
-
-
-        </div>
+        </section>
     );
 };
 
