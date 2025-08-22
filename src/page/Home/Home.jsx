@@ -10,7 +10,7 @@ const Home = () => {
 
    
     return (
-        <div className='w-[90%] mx-auto border'>
+        <div className='w-[90%] mx-auto'>
             <Banner></Banner>
             <About></About>
             <Skills></Skills>
