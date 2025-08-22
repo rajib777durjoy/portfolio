@@ -1,72 +1,108 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-import { motion } from "motion/react"
 const About = () => {
-    return (
-        <div
-            id="about"
-            className="w-full min-h-screen py-16 text-gray-300"
+  return (
+    <section
+      id="about"
+      className="w-full min-h-screen  py-20 text-gray-300"
+    >
+      {/* Section Title */}
+      <motion.h1
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="text-4xl md:text-5xl font-bold text-center text-blue-400 mb-16"
+      >
+        About Me
+      </motion.h1>
+
+      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-4">
+        {/* Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.7 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg shadow-blue-900 flex-shrink-0"
         >
-            <h1 className="text-4xl font-bold text-center text-blue-400 mb-10">About Me</h1>
+          <img
+            src="/durjoy_chando_image.png"
+            alt="Durjoy Chando"
+            className="w-full h-full object-cover"
+          />
+        </motion.div>
 
-            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-10 px-6">
-                {/* Profile Image */}
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.7 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1.2 }}
-                    className="w-40 h-40 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg shadow-blue-900"
-                >
-                    <img
-                        src="/durjoy_chando_image.png"
-                        alt="Durjoy Chando"
-                        className="w-full h-full object-cover"
-                    />
-                </motion.div>
+        {/* About Text */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1, delay: 0.3 }}
+          className="flex-1 text-blue-200"
+        >
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed mb-4 text-justify">
+            I'm a passionate <span className="text-blue-400 font-semibold">Web Developer</span> specializing in building dynamic and responsive websites using <span className="font-medium">HTML, CSS, JavaScript, and React</span>. I break projects into manageable tasks, write clean, maintainable code, and can handle projects from start to finish.
+          </p>
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-justify">
+            I also have hands-on experience with the <span className="text-blue-400 font-semibold">MERN stack</span>, which allows me to collaborate efficiently with backend teams. Currently pursuing my 2nd year of a BSS degree at National University, I strongly believe in continuous learning and solving real-world problems with code.
+          </p>
+        </motion.div>
+      </div>
 
-                {/* About Text */}
-                <motion.p
-                    initial={{ opacity: 0, x: -100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.2, delay: 0.3 }}
-                    className="text-sm md:text-base lg:text-lg leading-relaxed text-justify lg:max-w-2xl text-blue-200"
-                >
-                    I'm a Web developer passionate about building dynamic and responsive websites using HTML, CSS, JavaScript, and React. I plan projects carefully, break them into tasks, and write clean, maintainable code. I can manage projects from start to finish and troubleshoot bugs using logical thinking and online resources.
-                    <br />
-                    <br />
-                    I also have a good understanding of the MERN stack which helps me collaborate better with back-end development. Currently, I am pursuing my 2nd year of a BSS degree at National University. I believe in continuous learning and solving real-world problems with code.
-                </motion.p>
-            </div>
+      {/* Hobbies / Skills Section */}
+      <div className="mt-24 px-4">
+        <motion.h2
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-12"
+        >
+          My Hobbies
+        </motion.h2>
 
-            {/* Hobbies Section */}
-            <div className="mt-20">
-                <h2 className="text-3xl font-bold text-center text-blue-400 mb-8">My Hobbies</h2>
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 px-4">
-                    {/* Hobby 1 - Cricket */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2 }}
-                        className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-5 rounded-xl shadow-[0_4px_10px_rgb(0,70,160,0.6)] w-40"
-                    >
-                        <img src="/batsman.png" alt="Cricket" className="w-24 h-24 mb-3" />
-                        <p className="text-center text-sm font-semibold text-blue-300">Playing Cricket</p>
-                    </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 justify-items-center">
+          {/* Hobby Card */}
+          <motion.div
+            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
+          >
+            <img src="/batsman.png" alt="Cricket" className="w-24 h-24 mb-4" />
+            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
+              Playing Cricket
+            </p>
+          </motion.div>
 
-                    {/* Hobby 2 - Programming */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1.2, delay: 0.2 }}
-                        className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-5 rounded-xl shadow-[0_4px_10px_rgb(0,70,160,0.6)] w-40"
-                    >
-                        <img src="/programming.png" alt="Programming" className="w-24 h-24 mb-3" />
-                        <p className="text-center text-sm font-semibold text-blue-300">Programming</p>
-                    </motion.div>
-                </div>
-            </div>
+          <motion.div
+            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
+          >
+            <img src="/programming.png" alt="Programming" className="w-24 h-24 mb-4" />
+            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
+              Programming
+            </p>
+          </motion.div>
+
+          {/* <motion.div
+            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
+          >
+            <img src="/reading.png" alt="Reading" className="w-24 h-24 mb-4" />
+            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
+              Reading
+            </p>
+          </motion.div> */}
         </div>
-    );
+      </div>
+    </section>
+  );
 };
 
 export default About;

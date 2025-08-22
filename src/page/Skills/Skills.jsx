@@ -14,13 +14,13 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="w-full min-h-[450px]  py-16 px-6"
+            className="w-full min-h-[450px]  py-16 "
         >
             <h2 className="text-3xl font-extrabold text-center text-sky-400 mb-12 tracking-wide">
                 My Skills
             </h2>
 
-            <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
+            <div className="w-[100%] mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 px-4">
                 {data.map((item, index) => (
                     <motion.div
                         key={index}

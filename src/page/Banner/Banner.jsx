@@ -13,7 +13,7 @@ const Banner = () => {
         console.log('All letters have animated!');
     };
     return (
-         <div className="min-h-screen w-full overflow-hidden text-white">
+         <div className="min-h-screen w-[100%] overflow-hidden text-white">
             {/* Top Decorative Sparkle Section */}
             <div className="relative h-[250px] w-full overflow-hidden
                 [mask-image:radial-gradient(50%_50%,white,transparent)] 
@@ -30,10 +30,10 @@ const Banner = () => {
             </div>
 
             {/* Main Content */}
-            <div className='flex flex-col lg:flex-row justify-between items-center px-6 lg:px-20 mt-[-160px] lg:mt-20 mb-20'>
+            <div className='w-[100%]  flex flex-col lg:flex-row justify-between items-center mt-[-160px] lg:mt-20 mb-20 px-4'>
 
                 {/* Left Text Section */}
-                <div className="w-full lg:w-1/2 relative z-10 text-center lg:text-left">
+                <div className="w-full lg:w-1/2 relative z-10 text-center lg:text-left ">
                     <SplitText
                         text="Hi! I am Durjoy Chando"
                         className="text-3xl lg:text-4xl font-bold tracking-wide mb-4 text-[#00aaff]"
