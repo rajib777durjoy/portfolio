@@ -14,7 +14,7 @@ const Skills = () => {
     return (
         <section
             id="skills"
-            className="w-full min-h-[450px] bg-gradient-to-br from-black via-blue-900 to-black py-16 px-6"
+            className="w-full min-h-[450px]  py-16 px-6"
         >
             <h2 className="text-3xl font-extrabold text-center text-sky-400 mb-12 tracking-wide">
                 My Skills

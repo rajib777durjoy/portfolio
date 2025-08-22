@@ -33,7 +33,7 @@ const Contact = () => {
     return (
          <div
             id="contact"
-            className="w-full min-h-screen bg-gradient-to-br from-black via-[#001630] to-[#000814] py-16 px-6 text-blue-300"
+            className="w-full min-h-screen  py-16 px-6 text-blue-300"
         >
             <h1 className="text-3xl font-bold text-center mb-12 text-blue-400">Get In Touch</h1>
 

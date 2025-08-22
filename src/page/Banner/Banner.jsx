@@ -13,7 +13,7 @@ const Banner = () => {
         console.log('All letters have animated!');
     };
     return (
-         <div className="min-h-screen w-full overflow-hidden bg-gradient-to-b from-black via-[#001f4d] to-black text-white">
+         <div className="min-h-screen w-full overflow-hidden text-white">
             {/* Top Decorative Sparkle Section */}
             <div className="relative h-[250px] w-full overflow-hidden
                 [mask-image:radial-gradient(50%_50%,white,transparent)] 
@@ -62,7 +62,7 @@ const Banner = () => {
                             </span>
                         </h1>
                         <p className='text-base lg:text-lg leading-relaxed text-gray-300 px-4 lg:px-0'>
-                            I am a front-end developer. I can build dynamic and responsive websites. I work with HTML, CSS, JavaScript, and React. I always try to make user-friendly designs. I also have basic knowledge of the MERN stack. I like to write clean and good code.
+                            I'm a Web developer. I can build dynamic and responsive websites. I work with HTML, CSS, JavaScript, and React. I always try to make user-friendly designs. I also have basic knowledge of the MERN stack. I like to write clean and good code.
                         </p>
                     </article>
                 </div>

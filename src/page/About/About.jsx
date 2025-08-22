@@ -5,7 +5,7 @@ const About = () => {
     return (
         <div
             id="about"
-            className="w-full min-h-screen bg-gradient-to-br from-black via-[#001630] to-[#000814] py-16 text-gray-300"
+            className="w-full min-h-screen py-16 text-gray-300"
         >
             <h1 className="text-4xl font-bold text-center text-blue-400 mb-10">About Me</h1>
 
@@ -31,7 +31,7 @@ const About = () => {
                     transition={{ duration: 1.2, delay: 0.3 }}
                     className="text-sm md:text-base lg:text-lg leading-relaxed text-justify lg:max-w-2xl text-blue-200"
                 >
-                    I am a front-end developer passionate about building dynamic and responsive websites using HTML, CSS, JavaScript, and React. I plan projects carefully, break them into tasks, and write clean, maintainable code. I can manage projects from start to finish and troubleshoot bugs using logical thinking and online resources.
+                    I'm a Web developer passionate about building dynamic and responsive websites using HTML, CSS, JavaScript, and React. I plan projects carefully, break them into tasks, and write clean, maintainable code. I can manage projects from start to finish and troubleshoot bugs using logical thinking and online resources.
                     <br />
                     <br />
                     I also have a good understanding of the MERN stack which helps me collaborate better with back-end development. Currently, I am pursuing my 2nd year of a BSS degree at National University. I believe in continuous learning and solving real-world problems with code.
