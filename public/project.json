@@ -1,6 +1,39 @@
 [
   {
-    "title": "Dr.Meet - Doctor Appointment App",
+    "id": 1,
+    "name": "EatNow - Food Delivery Website",
+    "description": "EatNow is a full-stack food delivery platform that connects customers, restaurants, and delivery partners in one system. Users can easily order food online, track delivery in real time, and choose flexible payment options. Delivery partners can accept orders, track locations, and earn through the platform.",
+    "githubLink": "https://github.com/rajib777durjoy/EatNow-Food-order-and-delivery-website-",
+    "liveLink": "https://fooddelivery-704m.onrender.com",
+    "image": "/EatNowProject_SS.png",
+    "challenge": [
+      "Implementing real-time order and delivery status updates with Socket.io",
+      "Managing multiple user roles (customer, delivery man, admin)",
+      "Handling order lifecycle from placement to delivery",
+      "Designing a smooth and responsive user experience"
+    ],
+    "futurePlan": [
+      "Online payment gateway integration",
+      "Push notifications for order status updates",
+      "Delivery earnings dashboard for delivery partners",
+      "Advanced order tracking with map visualization"
+    ],
+    "skills": [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "PostgreSQL",
+      "Drizzle ORM",
+      "Socket.io",
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML",
+      "CSS"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Dr.Meet - Doctor Appointment website",
     "description": "A full-stack MERN app where patients can book appointments, doctors manage appointments, and admins control everything. Includes authentication, role-based dashboard, and Firebase.",
     "skills": [
       "React.js",
@@ -13,8 +46,8 @@
       "HTML",
       "CSS"
     ],
-    "liveLink": "https://doctorproject-a4e4f.web.app/",
-    "githubLink": "https://github.com/rajib777durjoy/DoctorAppoinmentProject",
+    "liveLink": "https://doctorappoinmentproject.onrender.com",
+    "githubLink": "https://github.com/rajib777durjoy/DoctorBookingSystem",
     "image": "/doctorAppoinmentPorjct.png",
     "challenge": "Implementing role-based access (admin, doctor, patient) with protected routes and JWT token verification using cookies was tricky. Also, syncing appointment status and real-time dashboard updates took extra logic.",
     "futurePlan": [
@@ -24,10 +57,10 @@
     ]
   },
   {
-    "id": 1,
+    "id": 3,
     "name": "Fitness Zone",
     "description": "Fitness Zone is a full-stack fitness tracking and management platform designed to help users maintain a healthy lifestyle. This application allows users to track workouts, set fitness goals, monitor progress, and get personalized recommendations. It features a user-friendly dashboard with real-time updates to enhance the fitness experience.",
-    "githubLink": "https://github.com/rajib777durjoy/assignment12",
+    "githubLink": "https://github.com/rajib777durjoy/Fitness_Zone-Fitness-Tracker-website-",
     "liveLink": "https://assignment12-f557e.web.app",
     "image": "/project_12image.png",
     "challenge": [
@@ -86,33 +119,32 @@
     ]
   },
   {
-    "id": 3,
-    "name": "Book Library",
-    "description": "Book Library is a full-stack web application designed to help users explore, manage, and track their reading journey. The platform allows users to browse books, add new books to the collection, and maintain a personalized reading list. With Firebase authentication, users can securely log in and save their preferences.",
-    "githubLink": "https://github.com/rajib777durjoy/assignment11client",
-    "liveLink": "https://assignment11-9afa5.web.app",
-    "image": "/booklibrarywebsiteImage.png",
+    "id": 4,
+    "name": "USA Plumbing",
+    "description": "The USA Plumbing website is a modern, user-friendly frontend-focused web application built using Next.js. This platform is designed to provide a seamless experience for users looking for reliable plumbing services across the United States. With a strong emphasis on performance, responsiveness, and clean UI design, the website ensures fast loading times and smooth navigation across all devices.",
+    "githubLink": "https://github.com/rajib777durjoy/plumber_website_next.js",
+    "liveLink": "https://plumber-website-weld.vercel.app",
+    "image": "/plumbing_website_Image.png",
     "challenge": [
-      "User authentication with Firebase",
-      "Interactive and responsive UI with React.js",
-      "Backend API powered by Node.js and Express.js",
-      "MongoDB integration for storing book and user data"
+      "Designing a clean and user-friendly UI for plumbing service customers",
+      "Ensuring fully responsive design across mobile, tablet, and desktop devices",
+      "Optimizing performance and SEO using Next.js",
+      "Structuring reusable components for scalability and maintainability"
     ],
     "futurePlan": [
-      "AI-based book recommendations",
-      "Social community for book lovers",
-      "Integration with e-book and audiobook platforms"
+      "Add online booking and appointment scheduling system",
+      "Integrate real-time service tracking and notifications",
+      "Implement customer reviews and rating system",
+      "Connect with backend services for full-stack functionality"
     ],
     "skills": [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "Next.js",
       "JavaScript",
-      "Firebase",
-      "Tailwind.css",
+      "Tailwind CSS",
+      "Framer Motion",
       "HTML",
-      "CSS"
+      "CSS",
+      "Responsive Design"
     ]
   }
 ]

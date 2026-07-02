@@ -1,108 +1,106 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-screen  py-20 text-gray-300"
+      className="w-full min-h-screen py-24 bg-[#020617] text-gray-300"
     >
-      {/* Section Title */}
+      {/* Title */}
       <motion.h1
-        initial={{ opacity: 0, y: -30 }}
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        className="text-4xl md:text-5xl font-bold text-center text-blue-400 mb-16"
+        transition={{ duration: 0.6 }}
+        className="text-4xl md:text-5xl font-bold text-center text-white mb-20"
       >
         About Me
       </motion.h1>
 
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 px-4">
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-14 px-4">
         {/* Profile Image */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.7 }}
+          initial={{ opacity: 0, scale: 0.85 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-blue-700 shadow-lg shadow-blue-900 flex-shrink-0"
+          transition={{ duration: 0.7 }}
+          className="relative"
         >
+          <div className="absolute inset-0 rounded-full bg-cyan-500 blur-xl opacity-20"></div>
           <img
             src="/durjoy_chando_image.png"
             alt="Durjoy Chando"
-            className="w-full h-full object-cover"
+            className="relative w-48 h-48 md:w-64 md:h-64 rounded-full object-cover
+                       border border-gray-700 shadow-lg"
           />
         </motion.div>
 
-        {/* About Text */}
+        {/* Text */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
+          initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 0.3 }}
-          className="flex-1 text-blue-200"
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="flex-1"
         >
-          <p className="text-base md:text-lg lg:text-xl leading-relaxed mb-4 text-justify">
-            I'm a passionate <span className="text-blue-400 font-semibold">Web Developer</span> specializing in building dynamic and responsive websites using <span className="font-medium">HTML, CSS, JavaScript, and React</span>. I break projects into manageable tasks, write clean, maintainable code, and can handle projects from start to finish.
+          <p className="text-base md:text-lg leading-relaxed mb-6 text-gray-400">
+            I’m a passionate{" "}
+            <span className="text-cyan-400 font-semibold">Web Developer</span>{" "}
+            focused on building modern, responsive web applications using{" "}
+            <span className="text-gray-200 font-medium">
+              HTML, CSS, JavaScript, and React
+            </span>
+            . I enjoy breaking complex problems into simple, clean, and
+            maintainable solutions.
           </p>
-          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-justify">
-            I also have hands-on experience with the <span className="text-blue-400 font-semibold">MERN stack</span>, which allows me to collaborate efficiently with backend teams. Currently pursuing my 2nd year of a BSS degree at National University, I strongly believe in continuous learning and solving real-world problems with code.
+
+          <p className="text-base md:text-lg leading-relaxed text-gray-400">
+            I also work with the{" "}
+            <span className="text-cyan-400 font-semibold">MERN stack</span>, enabling me to
+            build complete, scalable web applications. Alongside my academic studies in
+            BSS at National University, I have successfully completed a comprehensive web
+            development course from{" "}
+            <span className="text-cyan-400 font-semibold">Programming Hero</span>, where I
+            gained strong hands-on experience through real-world projects and practical
+            problem-solving.
           </p>
+
         </motion.div>
       </div>
 
-      {/* Hobbies / Skills Section */}
-      <div className="mt-24 px-4">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-3xl md:text-4xl font-bold text-center text-blue-400 mb-12"
-        >
-          My Hobbies
-        </motion.h2>
+      {/* Certificate Section (ADDED ONLY) */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mt-24 max-w-4xl mx-auto px-4 text-center"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+          Certification
+        </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2  gap-8 justify-items-center">
-          {/* Hobby Card */}
-          <motion.div
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
-          >
-            <img src="/batsman.png" alt="Cricket" className="w-24 h-24 mb-4" />
-            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
-              Playing Cricket
-            </p>
-          </motion.div>
+        <div className="bg-[#020617] border border-gray-800 rounded-xl px-6 py-10 shadow-md hover:shadow-cyan-500/30 transition">
+          <p className="text-gray-400 mb-4">
+            Successfully completed the{" "}
+            <span className="text-cyan-400 font-semibold">
+              Online Web Development Course
+            </span>{" "}
+            from Programming Hero.
+          </p>
 
-          <motion.div
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.2 }}
-            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
+          <a
+            href="https://drive.google.com/file/d/1jkZqJ5SGTNomEvyfZpFOtt00k1O9nzD4/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-6 py-2 rounded-md bg-cyan-500 text-black font-medium hover:bg-cyan-400 transition"
           >
-            <img src="/programming.png" alt="Programming" className="w-24 h-24 mb-4" />
-            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
-              Programming
-            </p>
-          </motion.div>
-
-          {/* <motion.div
-            whileHover={{ scale: 1.05, boxShadow: '0 10px 20px rgba(0,112,244,0.5)' }}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.4 }}
-            className="flex flex-col items-center bg-[#001e3c] border border-blue-800 p-6 rounded-xl shadow-md w-52"
-          >
-            <img src="/reading.png" alt="Reading" className="w-24 h-24 mb-4" />
-            <p className="text-center text-sm md:text-base font-semibold text-blue-300">
-              Reading
-            </p>
-          </motion.div> */}
+            View Certificate
+          </a>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
 
 export default About;
+
+

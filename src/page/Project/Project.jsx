@@ -1,119 +1,86 @@
-import React, { useEffect, useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-
-import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub } from 'react-icons/fa';
-import 'swiper/css';
-import 'swiper/css/navigation';
-
-import './Style.css'
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 const Project = () => {
-    // const navigate = useNavigate()
-    const [project, setproject] = useState([])
-    useEffect(() => {
-        fetch('/project.json')
-            .then(res => res.json())
-            .then(data => setproject(data))
-    }, [])
-    const [value, setValue] = useState(0)
-    console.log('value', value)
-    console.log('lenght', project.length - 1)
-    const arr = ['mongodb', 'javaScript', 'node.js', 'express.js']
-    const cardVariants = {
-        offscreen: { opacity: 0, y: 50 },
-        onscreen: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.5, ease: 'easeOut' },
-        },
-    };
-    return (
-            <div id='project' className='w-full min-h-[500px] my-10  py-10 text-gray-300'>
-                <div className="container mx-auto px-4">
-                    <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center text-blue-400">💼 My Featured Projects</h2>
+  const [project, setProject] = useState([]);
 
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        {project?.map((item, idx) => (
-                            <motion.div
-                                key={idx}
-                                className="bg-[#0a1a3c] rounded-2xl shadow-md hover:shadow-blue-700/60 border border-blue-800 transition-all duration-300 overflow-hidden flex flex-col"
-                                initial="offscreen"
-                                whileInView="onscreen"
-                                viewport={{ once: true, amount: 0.2 }}
-                                variants={cardVariants}
-                                whileHover={{ scale: 1.03 }}
-                            >
-                                <img
-                                    src={item.image}
-                                    alt={item.title || item.name}
-                                    className="w-[90%] mx-auto my-4 rounded-lg shadow-lg h-48 object-cover border-2 border-blue-600"
-                                />
-                                <div className="p-5 flex flex-col flex-grow justify-between">
-                                    <div>
-                                        <h3 className="text-xl font-semibold text-blue-300 mb-2">
-                                            {item.title || item.name}
-                                        </h3>
+  useEffect(() => {
+    fetch("/project.json")
+      .then((res) => res.json())
+      .then((data) => setProject(data));
+  }, []);
 
-                                        <p className="text-blue-200 text-sm mb-3 line-clamp-3">{item.description}</p>
+  return (
+    <div className="w-full min-h-screen  px-5 py-16">
+      {/* Section Title */}
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-white">
+          My Projects
+        </h2>
+        <p className="text-gray-400 mt-2">
+          Some of my recent works & case studies
+        </p>
+      </div>
 
-                                        <div className="mb-3">
-                                            <h4 className="text-sm font-semibold text-blue-400">Challenge:</h4>
-                                            {Array.isArray(item.challenge) ? (
-                                                <ul className="list-disc list-inside text-xs text-blue-300 space-y-1">
-                                                    {item.challenge.slice(0, 2).map((c, i) => <li key={i}>{c}</li>)}
-                                                </ul>
-                                            ) : (
-                                                <p className="text-xs text-blue-300 line-clamp-2">{item.challenge}</p>
-                                            )}
-                                        </div>
-
-                                        {item.futurePlan && (
-                                            <div className="mb-3">
-                                                <h4 className="text-sm font-semibold text-blue-400">Future:</h4>
-                                                <ul className="list-disc list-inside text-xs text-blue-300 space-y-1">
-                                                    {item.futurePlan.slice(0, 2).map((f, i) => <li key={i}>{f}</li>)}
-                                                </ul>
-                                            </div>
-                                        )}
-
-                                        <div className="flex flex-wrap gap-2 mt-4">
-                                            {item.skills.slice(0, 5).map((skill, i) => (
-                                                <span
-                                                    key={i}
-                                                    className="text-xs bg-blue-800 text-blue-300 px-3 py-1 rounded-full font-semibold"
-                                                >
-                                                    {skill}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div className="flex justify-between items-center mt-6">
-                                        <a
-                                            href={item.liveLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-sm text-blue-400 hover:text-blue-600 underline flex items-center gap-1"
-                                        >
-                                            Live <FaExternalLinkAlt className="text-base" />
-                                        </a>
-                                        <a
-                                            href={item.githubLink}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="text-sm text-blue-400 hover:text-blue-600 underline flex items-center gap-1"
-                                        >
-                                            Code <FaGithub className="text-base" />
-                                        </a>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </div>
+      {/* Project Grid */}
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        {project?.map((item, index) => (
+          <div
+            key={index}
+            whileHover={{ y: -8 }}
+            transition={{ duration: 0.3 }}
+            className=""
+          >
+            {/* Image */}
+            <div className="overflow-hidden rounded-t-md h-[220px] my-2">
+              <img
+                src={item?.image}
+                alt={item?.title || item?.name}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+              />
             </div>
-        );
+
+            {/* Content */}
+            <motion.div
+            key={index}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.3 }}
+          className=" border border-gray-800 rounded-md shadow-lg hover:shadow-cyan-500/30 hover:border-cyan-400 p-5 flex flex-col h-[240px]">
+              <h3 className="text-lg font-semibold text-white mb-2">
+                {item?.title || item?.name}
+              </h3>
+
+              <p className="text-gray-400 text-sm flex-grow">
+                {item?.description?.slice(0, 150)}...
+              </p>
+
+              {/* Buttons */}
+              <div className="flex items-center gap-4 mt-4">
+                <a
+                  href={item?.liveLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm px-4 py-2 rounded-md bg-cyan-500 text-black font-medium hover:bg-cyan-400 transition"
+                >
+                  Live <FaExternalLinkAlt />
+                </a>
+
+                <a
+                  href={item?.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 text-sm px-4 py-2 rounded-md border border-gray-600 text-gray-300 hover:text-white hover:border-white transition"
+                >
+                  GitHub <FaGithub />
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default Project;

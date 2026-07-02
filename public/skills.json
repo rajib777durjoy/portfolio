@@ -1,52 +1,15 @@
 [
-  {
-    "name": "React.js",
-    "Icon": "/science.png",
-    "description": "A JavaScript library for building user interfaces with reusable components and dynamic data handling."
-  },
-  {
-    "name": "Node.js",
-    "Icon": "/nodejs.png",
-    "description": "A server-side JavaScript runtime that allows building fast and scalable backend applications."
-  },
-  {
-    "name": "Express.js",
-    "Icon": "/ExpressIcon.png",
-    "description": "A lightweight framework for Node.js used to create APIs and manage server-side routes and middleware."
-  },
-  {
-    "name": "MongoDB",
-    "Icon": "/database-management.png",
-    "description": "A NoSQL database that stores data in flexible, JSON-like documents for scalable backend solutions."
-  },
-  {
-    "name": "Next.js",
-    "Icon": "/letter-n.png",
-    "description": "A NoSQL database that stores data in flexible, JSON-like documents for scalable backend solutions."
-  },
-  {
-    "name": "JavaScript",
-    "Icon": "/js.png",
-    "description": "A high-level programming language used to create interactive and dynamic web functionality."
-  },
-  {
-    "name": "Tailwind CSS",
-    "Icon": "/tailwindcssLogo.png",
-    "description": "A utility-first CSS framework used for rapidly designing responsive and modern user interfaces."
-  },
-  {
-    "name": "Firebase",
-    "Icon": "/fire.png",
-    "description": "A utility-first CSS framework used for rapidly designing responsive and modern user interfaces."
-  },
-  {
-    "name": "HTML",
-    "Icon": "/html.png",
-    "description": "The standard markup language for structuring web page content and elements."
-  },
-  {
-    "name": "CSS",
-    "Icon": "/text.png",
-    "description": "A stylesheet language used to style and layout web pages, including colors, spacing, and responsiveness."
-  }
+  { "name": "React.js" },
+  { "name": "Next.js" },
+  { "name": "JavaScript (ES6+)" },
+  { "name": "Node.js" },
+  { "name": "Express.js" },
+  { "name": "PostgreSQL" },
+  { "name": "Drizzle ORM" },
+  { "name": "JWT" },
+  { "name": "MongoDB" },
+  { "name": "Firebase" },
+  { "name": "Tailwind CSS" },
+  { "name": "HTML5" },
+  { "name": "CSS3" }
 ]

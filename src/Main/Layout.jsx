@@ -7,7 +7,7 @@ import Footer from '../Footer/Footer';
 
 const Layout = () => {
     return (
-        <div  className='w-[100%]  overflow-x-hidden' >
+        <div  className='w-[100%]  overflow-x-hidden bg-slate-950' >
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>

@@ -42,7 +42,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a href='/DurjoyChando_Resume.pdf' download='/DurjoyChando_Resume.pdf' rel='resume'  className="btn bg-cyan-600 text-black hover:text-white hover:border-sky-300 ">Resume <MdOutlineFileDownload className='text-xl' /></a>
+                    <a href='/FullStack_developer_Resume.pdf' download='/FullStack_developer_Resume.pdf' rel='Durjoy_Chando_Resume'  className="btn bg-cyan-500 text-black hover:text-white hover:border-sky-300 ">Resume <MdOutlineFileDownload className='text-xl' /></a>
                 </div>
                 
             </div>

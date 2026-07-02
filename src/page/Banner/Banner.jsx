@@ -1,80 +1,131 @@
-import React from 'react';
-import { FaFacebook, FaGithub, FaLinkedin, } from 'react-icons/fa';
-import { Typewriter } from 'react-simple-typewriter';
-import '../Banner/Bg.css'
-import { Link } from 'react-router-dom';
-import Lottie from 'lottie-react';
-import developermMode from '../../../src/assets/developerMode.json'
-import { Sparkles } from '../Banner/Sparkle';
-import SplitText from "../Banner/SplitText";
+import React from "react";
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import { Typewriter } from "react-simple-typewriter";
+import Lottie from "lottie-react";
+import developermMode from "../../../src/assets/developerMode.json";
+import { SiCodewars } from "react-icons/si";
 
 const Banner = () => {
-    const handleAnimationComplete = () => {
-        console.log('All letters have animated!');
-    };
-    return (
-         <div className="min-h-screen w-[100%] overflow-hidden text-white">
-            {/* Top Decorative Sparkle Section */}
-            <div className="relative h-[250px] w-full overflow-hidden
-                [mask-image:radial-gradient(50%_50%,white,transparent)] 
-                before:absolute before:inset-0 before:bg-[radial-gradient(circle_at_bottom_center,#003a8c,transparent_90%)] before:opacity-90
-                after:absolute after:border-2 after:-left-1/2 after:top-1/2 after:aspect-[1/1.8] after:w-[200%] after:rounded-[50%] after:border-b after:border-[#404a7e88] after:bg-zinc-900
-            ">
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,#001f4d_1px,transparent_1px),linear-gradient(to_bottom,#002b6e_1px,transparent_1px)] bg-[size:70px_80px] opacity-40"></div>
-                <Sparkles
-                    density={400}
-                    size={1.4}
-                    direction="top"
-                    className="absolute inset-x-0 top-0 h-full w-full [mask-image:radial-gradient(50%_50%,white,transparent_85%)]"
-                />
-            </div>
+  return (
+    <section className="relative min-h-screen  text-white overflow-hidden">
+      {/* Background Gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#020617] via-[#020617] to-[#020617] opacity-90"></div>
 
-            {/* Main Content */}
-            <div className='w-[100%]  flex flex-col lg:flex-row justify-between items-center mt-[-160px] lg:mt-20 mb-20 px-4'>
+      {/* Main Content */}
+      <div className="relative max-w-7xl mx-auto px-6 pt-28 pb-20 grid lg:grid-cols-2 gap-14 items-center">
+        {/* Left Content */}
+        <div className="text-center lg:text-left">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Hi, I'm{" "}
+            <span className="text-cyan-400">Durjoy Chando</span>
+          </h1>
 
-                {/* Left Text Section */}
-                <div className="w-full lg:w-1/2 relative z-10 text-center lg:text-left ">
-                    <SplitText
-                        text="Hi! I am Durjoy Chando"
-                        className="text-3xl lg:text-4xl font-bold tracking-wide mb-4 text-[#00aaff]"
-                        delay={150}
-                        animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
-                        animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
-                        easing="easeOutCubic"
-                        threshold={0.2}
-                        rootMargin="-50px"
-                        onLetterAnimationComplete={handleAnimationComplete}
-                    />
-                    <article className="mx-auto lg:mx-0 max-w-md lg:max-w-none text-white/90">
-                        <h1 className='text-2xl lg:text-3xl font-semibold mb-3'>
-                            I am a{' '}
-                            <span style={{ color: '#00aaff', fontWeight: 'bold' }}>
-                                <Typewriter
-                                    words={['Frontend Developer', 'MERN Stack Developer', 'React Developer']}
-                                    loop={0}
-                                    cursor
-                                    cursorStyle='_'
-                                    typeSpeed={70}
-                                    deleteSpeed={50}
-                                    delaySpeed={1000}
-                                    multiTextLoop
-                                />
-                            </span>
-                        </h1>
-                        <p className='text-base lg:text-lg leading-relaxed text-gray-300 px-4 lg:px-0'>
-                            I'm a Web developer. I can build dynamic and responsive websites. I work with HTML, CSS, JavaScript, and React. I always try to make user-friendly designs. I also have basic knowledge of the MERN stack. I like to write clean and good code.
-                        </p>
-                    </article>
-                </div>
+          <h2 className="text-xl md:text-2xl font-semibold mb-5">
+            I'm a{" "}
+            <span className="text-cyan-400">
+              <Typewriter
+                words={[
+                  "Full Stack Developer",
+                  "Frontend Developer",
+                  "MERN Stack Developer",
+                  "React Developer",
+                ]}
+                loop={0}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1200}
+              />
+            </span>
+          </h2>
 
-                {/* Right Animation Section */}
-                <div className='w-full lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0'>
-                    <Lottie className='w-4/5 lg:w-full max-w-lg' animationData={developermMode} />
-                </div>
-            </div>
+          <p className="text-gray-400 max-w-xl mx-auto lg:mx-0 leading-relaxed mb-8">
+            I specialize in building scalable, modern, and user-centric web applications.
+            My experience spans across frontend and backend development using{" "}
+            <span className="text-cyan-400 font-medium">
+              HTML, CSS, JavaScript, React, Next.js
+            </span>{" "}
+            on the frontend and{" "}
+            <span className="text-sky-400 font-medium">
+              Node.js, Express.js, PostgreSQL
+            </span>{" "}
+            on the backend. I also work with{" "}
+            <span className="text-indigo-400 font-medium">
+              Drizzle ORM
+            </span>{" "}
+            to design efficient databases and APIs, focusing on clean architecture,
+            performance optimization, and real-world full-stack solutions.
+          </p>
+          
+          {/* Social Icons */}
+          <div className="flex justify-center lg:justify-start gap-5 mt-6">
+            {/* GitHub */}
+            <a
+              href="https://github.com/rajib777durjoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-11 h-11 rounded-full border border-gray-600 text-gray-400 transition-all duration-300 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.5)]"
+            >
+              <FaGithub className="text-xl" />
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/durjoy-chando-4a9878317"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-11 h-11 rounded-full border border-gray-600 text-gray-400 transition-all duration-300 hover:border-[#0A66C2] hover:text-[#0A66C2] hover:shadow-[0_0_15px_rgba(10,102,194,0.5)]"
+            >
+              <FaLinkedin className="text-xl" />
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/durjoy.chando.2024"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-11 h-11 rounded-full border border-gray-600 text-gray-400 transition-all duration-300 hover:border-[#1877F2] hover:text-[#1877F2] hover:shadow-[0_0_15px_rgba(24,119,242,0.5)]"
+            >
+              <FaFacebook className="text-xl" />
+            </a>
+
+            {/* Codewars */}
+            <a
+              href="https://www.codewars.com/users/durjoychando2001"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex items-center justify-center w-11 h-11 rounded-full border border-gray-600 text-gray-400 transition-all duration-300 hover:border-[#B1361E] hover:text-[#B1361E] hover:shadow-[0_0_15px_rgba(177,54,30,0.5)]"
+            >
+              <SiCodewars className="text-xl" />
+            </a>
+          </div>
+
         </div>
-    )
 
+        {/* Right Animation */}
+        <div className="flex justify-center lg:justify-end">
+          <Lottie
+            animationData={developermMode}
+            className="w-full max-w-md lg:max-w-lg"
+          />
+        </div>
+      </div>
+
+      {/* Bottom Skills Strip */}
+      {/* <div className="relative border-t border-gray-800 bg-[#020617] py-8">
+        <div className="max-w-6xl mx-auto px-4">
+          <Headline
+            text="React • JavaScript • Tailwind CSS • Node.js • Express.js • MongoDB • Firebase • REST API • Next.js"
+            speed={120}
+            delay={10}
+            loop
+            className="text-center text-cyan-400 font-semibold tracking-wide text-lg md:text-xl"
+          />
+        </div>
+      </div> */}
+    </section>
+  );
 };
 
 export default Banner;
