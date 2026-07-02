@@ -48,7 +48,7 @@
     ],
     "liveLink": "https://doctorappoinmentproject.onrender.com",
     "githubLink": "https://github.com/rajib777durjoy/DoctorBookingSystem",
-    "image": "/doctorAppoinmentPorjct.png",
+    "image": "/DoctorBookingSystemImage.png",
     "challenge": "Implementing role-based access (admin, doctor, patient) with protected routes and JWT token verification using cookies was tricky. Also, syncing appointment status and real-time dashboard updates took extra logic.",
     "futurePlan": [
       "Integrate secure video calling functionality for virtual appointments",
